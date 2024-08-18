@@ -1,0 +1,15 @@
+/**
+ * Search requests only.
+ * @author marksowell
+**/
+var mimeType = requestResponse.mimeType();
+
+return requestResponse.request().isInScope()
+ && mimeType != MimeType.CSS
+ && mimeType != MimeType.IMAGE_UNKNOWN
+ && mimeType != MimeType.IMAGE_JPEG
+ && mimeType != MimeType.IMAGE_GIF
+ && mimeType != MimeType.IMAGE_PNG
+ && mimeType != MimeType.IMAGE_BMP
+ && mimeType != MimeType.IMAGE_TIFF
+ && requestResponse.request().toString().toLowerCase().contains("admin".toLowerCase());
